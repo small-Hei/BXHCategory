@@ -1,0 +1,6 @@
+use_frameworks!
+target 'BXHCategory_Tests' do
+  pod 'BXHCategory', :path => '../'
+  
+  
+end
