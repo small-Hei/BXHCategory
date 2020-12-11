@@ -1,0 +1,16 @@
+PODS:
+  - BXHCategory (0.1.0)
+
+DEPENDENCIES:
+  - BXHCategory (from `../`)
+
+EXTERNAL SOURCES:
+  BXHCategory:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BXHCategory: a299d0ac1ecfc5ecabd9d658a439caa37a7618e4
+
+PODFILE CHECKSUM: f682559093865af67282e9e21cc350714d162977
+
+COCOAPODS: 1.9.3

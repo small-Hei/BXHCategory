@@ -1,0 +1,22 @@
+{
+  "name": "BXHCategory",
+  "version": "0.1.0",
+  "summary": "A short description of BXHCategory.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/17602102652@163.com/BXHCategory",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "17602102652@163.com": "baishuang@yit.com"
+  },
+  "source": {
+    "git": "https://github.com/17602102652@163.com/BXHCategory.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "BXHCategory/Classes/**/*"
+}
