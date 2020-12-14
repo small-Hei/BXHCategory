@@ -17,7 +17,15 @@ typedef enum : NSUInteger {
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NSDate (BXH)
+
 + (NSString *)stringFromCurrentDate:(BXH_FromDateFormat)dateFormat;
+
++ (NSString *)strFromDateWithTimeInterval:(NSTimeInterval)stamp withStringFormat:(BXH_FromDateFormat)dateFormat;
+
+- (BOOL)isEarlierThanDate:(NSDate *)aDate;
+
+- (BOOL)isLaterThanDate:(NSDate *)aDate;
+
 @end
 
 NS_ASSUME_NONNULL_END
