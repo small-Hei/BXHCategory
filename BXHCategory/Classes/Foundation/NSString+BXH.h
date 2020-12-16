@@ -47,7 +47,9 @@ NS_ASSUME_NONNULL_BEGIN
 // JsonToDic 把格式化的JSON格式的字符串转换成字典
 - (NSDictionary *)dictionaryWithJSONString;
 
-
+#pragma mark - 加密
++ (NSString *)md5StringWithString:(NSString *)string;
++ (NSString *)md5StringWithData:(NSData *)data;
 
 @end
 

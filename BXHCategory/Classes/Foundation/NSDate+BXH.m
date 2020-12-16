@@ -9,6 +9,14 @@
 
 @implementation NSDate (BXH)
 
+//获取当前时间时间戳
++ (NSString *_Nullable)getStringDateNowTimeInterval{
+    NSTimeInterval timeInterval = [[NSDate date] timeIntervalSince1970];
+    long long dTime = [[NSNumber numberWithDouble:timeInterval] longLongValue]; // 将double转为long long型
+    NSString *tempTime = [NSString stringWithFormat:@"%llu",dTime]; // 输出long long型
+    return tempTime;
+}
+
 + (NSString *)stringFromCurrentDate:(BXH_FromDateFormat)dateFormat{
     NSDate *currentDate = [NSDate date];
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
@@ -17,7 +25,7 @@
     return selfStr;
 }
 
-+ (NSString *)strFromDateWithTimeInterval:(NSTimeInterval)stamp withStringFormat:(BXH_FromDateFormat)dateFormat{
++ (NSString *)stringFromDateWithTimeInterval:(NSTimeInterval)stamp withStringFormat:(BXH_FromDateFormat)dateFormat{
     NSDate *currentDate = [NSDate dateWithTimeIntervalSince1970:stamp];
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
     fmt.dateFormat =  [[self class] dateFormatToString:dateFormat];

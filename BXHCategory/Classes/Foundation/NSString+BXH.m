@@ -6,6 +6,7 @@
 //
 
 #import "NSString+BXH.h"
+#import <CommonCrypto/CommonDigest.h>
 
 @implementation NSString (BXH)
 - (UIImage *)createQRcode {
@@ -124,6 +125,21 @@
         return nil;
     }
     return dic;
+}
+
++ (NSString *)md5StringWithString:(NSString *)string {
+    return [self md5StringWithData:[string dataUsingEncoding:NSUTF8StringEncoding]];
+}
+
++ (NSString *)md5StringWithData:(NSData *)data {
+    uint8_t digest[CC_SHA1_DIGEST_LENGTH];
+    CC_SHA1(data.bytes, (unsigned int)data.length, digest);
+    NSMutableString* output = [NSMutableString stringWithCapacity:CC_SHA1_DIGEST_LENGTH * 2];
+    
+    for(int i = 0; i < CC_SHA1_DIGEST_LENGTH; i++) {
+        [output appendFormat:@"%02x", digest[i]];
+    }
+    return [output copy];
 }
 
 @end
